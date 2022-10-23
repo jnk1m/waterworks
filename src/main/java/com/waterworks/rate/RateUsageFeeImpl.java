@@ -1,6 +1,6 @@
 package com.waterworks.rate;
 
-import com.waterworks.billing.BillingRepositoryImpl;
+import com.waterworks.billing.BillingRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -9,9 +9,9 @@ import java.util.List;
 @Component
 public class RateUsageFeeImpl implements RateUsageFee {
 
-   BillingRepositoryImpl billingRepository; // 인터페이스로 바꾸기
+   BillingRepository billingRepository;
 
-   public RateUsageFeeImpl(BillingRepositoryImpl billingRepository) {
+   public RateUsageFeeImpl(BillingRepository billingRepository) {
       this.billingRepository = billingRepository;
    }
 
