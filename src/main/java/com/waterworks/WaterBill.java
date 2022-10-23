@@ -32,10 +32,10 @@ public class WaterBill {
    @Override
    public String toString() {
       return getClass().getSimpleName()
-              + " {city="+ getCity() +","
+              + " {city=" + getCity() + ","
               + "sector=" + getSector() + ", "
-              + "unitPrice= "+ getUnitPrice() + " , "
-              + "billTotal= "+ getBillTotal() +"}";
+              + "unitPrice= " + getUnitPrice() + " , "
+              + "billTotal= " + getBillTotal() + "}";
 
    }
 }

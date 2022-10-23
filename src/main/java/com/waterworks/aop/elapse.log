@@ -1,0 +1,7 @@
+parseCsvToQueue 13[ms]
+loadRateQueue 19[ms]
+getFiveCheapestRate 1[ms]
+getFiveCheapestRate 0[ms]
+calculateRate 6[ms]
+mergeData 5[ms]
+reportResult 16[ms]

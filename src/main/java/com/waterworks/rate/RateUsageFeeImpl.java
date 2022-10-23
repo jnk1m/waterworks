@@ -1,6 +1,6 @@
 package com.waterworks.rate;
 
-import com.waterworks.billing.BillingRepositoryImpl;
+import com.waterworks.billing.BillingRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -9,9 +9,9 @@ import java.util.List;
 @Component
 public class RateUsageFeeImpl implements RateUsageFee {
 
-   BillingRepositoryImpl billingRepository; // 인터페이스로 바꾸기
+   BillingRepository billingRepository;
 
-   public RateUsageFeeImpl(BillingRepositoryImpl billingRepository) {
+   public RateUsageFeeImpl(BillingRepository billingRepository) {
       this.billingRepository = billingRepository;
    }
 
@@ -21,11 +21,11 @@ public class RateUsageFeeImpl implements RateUsageFee {
       List<String[]> fiveCheapestRate = billingRepository.getFiveCheapestRate(usage);
       List<String[]> calculatedUsageFeeList = new ArrayList<>();
 
-      for(int i = 0 ; i< fiveCheapestRate.size() ; i++){
+      for (int i = 0; i < fiveCheapestRate.size(); i++) {
          String[] eachRate = fiveCheapestRate.get(i);
          int i1 = Integer.parseInt(eachRate[6]) * usage;
 
-         String[] test= new String[2];
+         String[] test = new String[2];
          test[0] = eachRate[0];
          test[1] = String.valueOf(i1);
          calculatedUsageFeeList.add(test);
