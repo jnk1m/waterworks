@@ -27,7 +27,7 @@ public class Main {
       List<String[]> fiveCheapestRate = billingRepository.getFiveCheapestRate(usage);
       List<String[]> calculatedUsageFeeList = rateUsageFee.calculateRate(usage);
 
-      resultReport.mergeData(fiveCheapestRate,calculatedUsageFeeList);
+      resultReport.mergeData(fiveCheapestRate, calculatedUsageFeeList);
       resultReport.reportResult();
 
 

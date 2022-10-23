@@ -29,7 +29,7 @@ public class BillingRepositoryImpl implements BillingRepository {
 
    @Override
    public List<String[]> getFiveCheapestRate(int usage) {
-      while(getFiveFlag < 5){
+      while (getFiveFlag < 5) {
          cheapestFiveList.add(rateQueue.poll());
          getFiveFlag++;
       }
