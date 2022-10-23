@@ -9,7 +9,7 @@ import java.util.List;
 @Component
 public class RateUsageFeeImpl implements RateUsageFee {
 
-   BillingRepositoryImpl billingRepository;
+   BillingRepositoryImpl billingRepository; // 인터페이스로 바꾸기
 
    public RateUsageFeeImpl(BillingRepositoryImpl billingRepository) {
       this.billingRepository = billingRepository;
